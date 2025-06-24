@@ -1,7 +1,3 @@
-Absolutely! Here's a polished, engaging, and emoji-enhanced **final README** draft that’s recruiter-friendly, elaborates well, and includes placeholders for images/screenshots where you can add visuals of your app or relevant charts.
-
----
-
 # 🧓 NHANES Age Group Prediction Web Application
 
 ---
