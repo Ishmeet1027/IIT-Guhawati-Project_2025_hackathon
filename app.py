@@ -44,7 +44,7 @@ if option == "🏠 Home":
 # Individual Prediction
 # -----------------------------
 elif option == "🧍 Individual Prediction":
-    st.markdown("<h2 style='color:#4CAF50;'>Enter Individual Data</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color:#4CAF50; text-align: center;'>Enter Individual Data</h2>", unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     with col1:
@@ -82,7 +82,21 @@ elif option == "🧍 Individual Prediction":
 # Batch Prediction
 # -----------------------------
 elif option == "📁 Batch Prediction":
-    st.markdown("<h2 style='color:#2196F3;'>Upload CSV for Batch Prediction</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color:#2196F3; text-align: center;'>Upload CSV for Batch Prediction</h2>", unsafe_allow_html=True)
+
+    # Show required columns with full forms/descriptions in one column
+    st.info("✅ Your CSV must include the following columns (case-sensitive):")
+
+    st.markdown("""
+    - RIDAGEYR  (Age in Years)  
+    - RIAGENDR  (Gender: 1 = Male, 2 = Female)  
+    - PAQ605  (Physical Activity)  
+    - BMXBMI  (Body Mass Index)  
+    - LBXGLU  (Glucose Level)  
+    - DIQ010  (Diabetes Status)  
+    - LBXGLT  (Glucose Tolerance)  
+    - LBXIN  (Insulin Level)  
+    """)
 
     uploaded_file = st.file_uploader("📤 Upload a CSV file with the required columns", type=["csv"])
 
@@ -101,5 +115,6 @@ elif option == "📁 Batch Prediction":
 
             csv = df.to_csv(index=False).encode('utf-8')
             st.download_button("⬇️ Download Full Predictions CSV", csv, file_name="age_group_predictions.csv", mime='text/csv')
+            
         else:
             st.error(f"❌ The uploaded file is missing required columns: {', '.join(required_cols)}")
