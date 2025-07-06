@@ -8,7 +8,7 @@ This project was developed as part of the **Summer Analytics 2025 Hackathon** ho
 
 The foundation of this work lies in the **National Health and Nutrition Examination Survey (NHANES)** — a comprehensive and nationally representative dataset collected by the CDC. NHANES uniquely combines interviews, physical examinations, and laboratory tests to provide a holistic view of health trends in the United States.
 
-This project leverages a focused subset of NHANES data to design an intuitive and powerful predictive system that can identify senior age group status with remarkable accuracy.
+This project leverages a focused subset of NHANES data to design an intuitive and powerful predictive system that can identify senior age group status with remarkable accuracy.                  
 
 ---
 
